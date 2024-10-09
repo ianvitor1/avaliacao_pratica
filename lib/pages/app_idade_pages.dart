@@ -15,12 +15,12 @@ class IdadeApp extends StatelessWidget {
       title: 
         'Fase da Vida',
       theme: ThemeData(
-        primarySwatch: Colors.red,
       ),
       home: const MyHomePage(title: 'Qual a sua fase da vida?'),
     );
   }
 }
+
 
 String determinarFaseDaVida(int idade) {
   if (idade < 3) {
@@ -81,6 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
           
             const Text('Digite a sua idade: '),
             TextField(
+              inputFormatters: [
+                FilteringTextInputFormatter.digitsOnly
+              ],
               textAlign: TextAlign.center,
               controller: _idadeController,
               keyboardType: TextInputType.number,
