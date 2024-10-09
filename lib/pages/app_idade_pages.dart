@@ -15,6 +15,7 @@ class IdadeApp extends StatelessWidget {
       title: 
         'Fase da Vida',
       theme: ThemeData(
+        appBarTheme: AppBarTheme(color: Colors.red),
       ),
       home: const MyHomePage(title: 'Qual a sua fase da vida?'),
     );
